@@ -1,0 +1,47 @@
+@import "./variables";
+@import "./keyframes";
+
+@mixin body-position {
+    max-width: 768px;
+    min-width: 320px;
+    margin: auto;
+    box-sizing: border-box;
+    margin-bottom: -50rem;
+}
+
+@mixin footer {
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+    background: #353535;
+    img{        
+        width: 7rem;
+        filter: invert(1);
+        @include margin-left-and-right;
+    }
+    ul {
+        list-style: none;
+        padding-inline-start: 0;
+    }
+    li {        
+        margin-bottom: .5rem;
+        font-family: $fontTxt;
+        @include margin-left-and-right;  
+        a {
+            text-decoration: none;
+            color: #fff;
+        }      
+    }
+    .icon {
+        margin-right: .5rem;
+        font-size: .8rem;
+    }
+}
+
+@mixin box-shadow {
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.281);
+}
+
+@mixin margin-left-and-right {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
